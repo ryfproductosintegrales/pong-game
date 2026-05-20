@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.pongame.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Pong Game</name>
+    <description>El juego clásico Pong reimaginado con temas y multijugador</description>
+    <author email="productosintegralesryf@gmail.com" href="https://github.com/ryfproductosintegrales">Ryf Productos Integrales</author>
+    <content src="index.html" />
+    
+    <!-- Permisos -->
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    
+    <!-- Preferencias de la aplicación -->
+    <preference name="Orientation" value="portrait" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="ScreenSize" value="small" />
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    
+    <!-- Configuración específica de plataforma -->
+    <platform name="android">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+        </edit-config>
+        <allow-intent href="market:*" />
+        <icon src="res/android/icon.png" density="ldpi" />
+        <icon src="res/android/icon.png" density="mdpi" />
+        <icon src="res/android/icon.png" density="hdpi" />
+        <icon src="res/android/icon.png" density="xhdpi" />
+        <icon src="res/android/icon.png" density="xxhdpi" />
+        <icon src="res/android/icon.png" density="xxxhdpi" />
+    </platform>
+    
+    <plugin name="cordova-plugin-statusbar" spec="~2.4.2" />
+    <plugin name="cordova-plugin-device" spec="~2.0.2" />
+</widget>
